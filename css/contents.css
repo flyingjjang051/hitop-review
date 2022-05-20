@@ -36,6 +36,16 @@
 
 #subVisual05 { background-image: url("../images/contents/subVisual05.jpg"); }
 
+.tab .tabMenu { display: flex; }
+
+.tab .tabMenu li { flex-basis: 25%; border: 1px solid #ccc; box-sizing: border-box; }
+
+.tab .tabMenu li.active { border-color: #bf0c14; }
+
+.tab .tabMenu li.active a { background-color: #bf0c14; color: #fff; }
+
+.tab .tabMenu li a { display: flex; height: 50px; justify-content: center; align-items: center; }
+
 .subContents { min-height: 100vh; margin-bottom: 100px; }
 
 .subContents .contentsTitle { font-size: 38px; font-weight: 700; text-align: center; margin: 80px 0; }
@@ -73,3 +83,25 @@
 #greeting .desc .txtBox { text-align: left; }
 
 #greeting .desc .txtBox p { margin-bottom: 30px; }
+
+#history .historyBox { margin-top: 150px; position: relative; }
+
+#history .historyBox:before { content: ''; display: block; position: absolute; top: 0; left: 50%; width: 1px; height: 100%; background-color: #ccc; }
+
+#history .historyBox .yearBox { display: flex; padding: 50px 0; }
+
+#history .historyBox .yearBox:nth-child(2n) { justify-content: flex-end; padding-left: 100px; }
+
+#history .historyBox .yearBox:nth-child(2n+1) { text-align: right; padding-right: 100px; }
+
+#history .historyBox .yearBox:nth-child(2n+1) .inner .monthBox li { flex-direction: row-reverse; }
+
+#history .historyBox .yearBox:nth-child(2n+1) .inner .monthBox li .month { margin-right: 0; margin-left: 20px; }
+
+#history .historyBox .yearBox .inner { width: 50%; }
+
+#history .historyBox .yearBox .inner .year { font-size: 48px; font-weight: 700; margin-bottom: 30px; }
+
+#history .historyBox .yearBox .inner .monthBox li { display: flex; margin-bottom: 20px; }
+
+#history .historyBox .yearBox .inner .monthBox li .month { font-weight: 700; margin-right: 20px; }

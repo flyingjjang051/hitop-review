@@ -92,6 +92,31 @@
   }  
 }
 
+.tab {
+  .tabMenu {
+    display: flex;
+    li {
+      flex-basis:25%;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      &.active {
+        border-color:$main-color;
+        a {
+          background-color: $main-color;
+          color:#fff;
+        }
+      }
+      a {
+        display: flex;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+
+
 
 .subContents {
   min-height: 100vh;
@@ -183,6 +208,66 @@
       text-align: left;
       p {
         margin-bottom: 30px;
+      }
+    }
+  }
+}
+#history {
+  .historyBox {
+    margin-top:150px;
+    position: relative;
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top:0;
+      left:50%;
+      width:1px;
+      height: 100%;
+      background-color: #ccc;
+    }
+    .yearBox {
+      display: flex;
+      padding: 50px 0;
+      &:nth-child(2n) {
+        justify-content: flex-end;
+        padding-left: 100px;
+      }
+      &:nth-child(2n+1) {
+        text-align: right;
+        padding-right: 100px;  
+        .inner {
+          .monthBox {
+            li {
+              flex-direction: row-reverse;
+              //justify-content: flex-start;
+              .month {
+                margin-right: 0;
+                margin-left: 20px;
+              }
+            }
+          }
+        }
+      }
+      
+      .inner {
+        width:50%;
+        //background-color: #666;
+        .year {
+          font-size: $font-large;
+          font-weight: 700;
+          margin-bottom: 30px;
+        }
+        .monthBox {
+          li {
+            display: flex;
+            margin-bottom: 20px;
+            .month {
+              font-weight: 700;
+              margin-right: 20px;
+            }
+          }
+        }
       }
     }
   }
