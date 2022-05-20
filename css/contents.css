@@ -37,3 +37,11 @@
 #subVisual05 { background-image: url("../images/contents/subVisual05.jpg"); }
 
 .subContents { min-height: 100vh; }
+
+.subContents .contentsTitle { font-size: 38px; font-weight: 700; text-align: center; margin: 80px 0; }
+
+.subContents .contentsTitle:after { display: block; position: relative; content: ""; display: block; width: 40px; height: 5px; background-color: #bf0c14; margin: 30px auto; }
+
+#introduce .summaryBox { display: flex; }
+
+#introduce .summaryBox .txtBox { width: 50%; background-color: #bf0c14; color: #fff; text-align: center; }

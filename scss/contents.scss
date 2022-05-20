@@ -95,4 +95,26 @@
 
 .subContents {
   min-height: 100vh;
+  .contentsTitle {
+    font-size: $font-large - 10px;
+    font-weight: 700;
+    text-align: center;
+    margin: 80px 0;
+    &:after {
+      @include pseudo(block,relative,"");
+      @include box(40px,5px,$main-color);
+      margin: 30px auto;
+    }
+  }
+}
+#introduce {
+  .summaryBox {
+    display: flex;
+    .txtBox {
+      width:50%;
+      background-color: $main-color;
+      color:#fff;
+      text-align: center;
+    }
+  }
 }
