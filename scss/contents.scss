@@ -1,0 +1,98 @@
+@import "vars";
+@import "mixin";
+.subVisual {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: {
+    repeat:no-repeat;
+    size:cover;
+    position:50% 50%;
+  }
+  .titleBox {
+    color:#fff;
+    text-align: center;
+    margin-top: 50px;
+    .subTitle {
+      font-size: $font-large;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+  }
+  #lnb {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 50px;
+    .container {
+      display: flex;
+      .home {
+        display: flex;
+        width:50px;
+        height: 50px;
+        overflow: hidden;
+        text-indent: -999px;
+        justify-content: center;
+        align-items: center;
+        border-left:1px solid rgba(255,255,255,0.5);
+        &:before {
+          text-indent: 0;
+          font-size: 24px;
+          color:#fff;
+          @include icon("home",0);
+        }
+      }
+      .menu {
+        width:200px;
+        &:hover {
+          ul{
+            display: block;
+          }
+        }
+        &:nth-of-type(2) button {
+          border-right: 1px solid rgba(255,255,255,0.5);
+        }
+        button {
+          border:none;
+          background: none;
+          height: 50px;
+          padding: 0 20px;
+          color:#fff;
+          font-size: 16px;
+          border-left: 1px solid rgba(255,255,255,0.5);
+          width:100%;
+          text-align: left;
+        }
+        ul {
+          background-color: #fff;
+          border: 1px solid #ccc;
+          border-top: none;
+          display: none;
+          li {
+            border-top: 1px solid #ccc;
+            a {
+              display: block;
+              padding: 0 20px;
+              height: 50px;
+              line-height: 50px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@for $i from 1 to 6 {
+  #subVisual0#{$i} {
+    background-image: url("../images/contents/subVisual0#{$i}.jpg");
+  }  
+}
+
+
+.subContents {
+  min-height: 100vh;
+}
