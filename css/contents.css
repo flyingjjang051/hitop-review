@@ -44,4 +44,10 @@
 
 #introduce .summaryBox { display: flex; }
 
-#introduce .summaryBox .txtBox { width: 50%; background-color: #bf0c14; color: #fff; text-align: center; }
+#introduce .summaryBox .txtBox { width: 50%; color: #fff; text-align: center; display: flex; flex-direction: column; justify-content: center; background-color: #bf0c14; background-position: right 0 bottom 0; background-repeat: no-repeat; background-image: url("../images/contents/bg_logo.png"); }
+
+#introduce .summaryBox .txtBox .main { font-size: 48px; font-weight: 700; }
+
+#introduce .summaryBox .txtBox .main:after { content: ''; display: block; width: 40px; height: 2px; background-color: rgba(255, 255, 255, 0.5); margin: 20px auto; }
+
+#introduce .summaryBox .txtBox .sub { line-height: 1.5; font-size: 20px; }

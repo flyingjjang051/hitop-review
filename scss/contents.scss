@@ -112,9 +112,34 @@
     display: flex;
     .txtBox {
       width:50%;
-      background-color: $main-color;
       color:#fff;
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background:{
+        color:$main-color;
+        position: right 0 bottom 0;
+        repeat:no-repeat;
+        image:url("../images/contents/bg_logo.png");
+      }
+      
+      .main {
+        font-size: $font-large;
+        font-weight: 700;
+        &:after {
+          content: '';
+          display: block;
+          width:40px;
+          height: 2px;
+          background-color: rgba(255,255,255,0.5);
+          margin: 20px auto;
+        }
+      }
+      .sub {
+        line-height: 1.5;
+        font-size: 20px;
+      }
     }
   }
 }
