@@ -95,6 +95,7 @@
 
 .subContents {
   min-height: 100vh;
+  margin-bottom: 100px;
   .contentsTitle {
     font-size: $font-large - 10px;
     font-weight: 700;
@@ -104,6 +105,30 @@
       @include pseudo(block,relative,"");
       @include box(40px,5px,$main-color);
       margin: 30px auto;
+    }
+  }
+  .desc {
+    text-align: center;
+    margin-top: 50px;
+    .headTxt {
+      font-size: $font-large;
+      line-height: 1.25;
+      font-weight: 300;
+      margin-bottom: 50px;
+      strong {
+        font-weight: 500;
+        .red {
+          color:$main-color;
+        }
+      }
+    }
+    .txtBox {
+      text-align: justify;
+      p {
+        margin-bottom: 50px;
+        line-height: 1.5;
+        word-break: keep-all;
+      }
     }
   }
 }
@@ -139,6 +164,25 @@
       .sub {
         line-height: 1.5;
         font-size: 20px;
+      }
+    }
+  }
+}
+#greeting {
+  .container {
+    display: flex;
+    img {
+      align-self: flex-start;
+    }
+  }
+  .desc {
+    text-align: left;
+    padding-left: 80px;
+    margin-top: 0;
+    .txtBox {
+      text-align: left;
+      p {
+        margin-bottom: 30px;
       }
     }
   }

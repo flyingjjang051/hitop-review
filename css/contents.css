@@ -36,11 +36,23 @@
 
 #subVisual05 { background-image: url("../images/contents/subVisual05.jpg"); }
 
-.subContents { min-height: 100vh; }
+.subContents { min-height: 100vh; margin-bottom: 100px; }
 
 .subContents .contentsTitle { font-size: 38px; font-weight: 700; text-align: center; margin: 80px 0; }
 
 .subContents .contentsTitle:after { display: block; position: relative; content: ""; display: block; width: 40px; height: 5px; background-color: #bf0c14; margin: 30px auto; }
+
+.subContents .desc { text-align: center; margin-top: 50px; }
+
+.subContents .desc .headTxt { font-size: 48px; line-height: 1.25; font-weight: 300; margin-bottom: 50px; }
+
+.subContents .desc .headTxt strong { font-weight: 500; }
+
+.subContents .desc .headTxt strong .red { color: #bf0c14; }
+
+.subContents .desc .txtBox { text-align: justify; }
+
+.subContents .desc .txtBox p { margin-bottom: 50px; line-height: 1.5; word-break: keep-all; }
 
 #introduce .summaryBox { display: flex; }
 
@@ -51,3 +63,13 @@
 #introduce .summaryBox .txtBox .main:after { content: ''; display: block; width: 40px; height: 2px; background-color: rgba(255, 255, 255, 0.5); margin: 20px auto; }
 
 #introduce .summaryBox .txtBox .sub { line-height: 1.5; font-size: 20px; }
+
+#greeting .container { display: flex; }
+
+#greeting .container img { align-self: flex-start; }
+
+#greeting .desc { text-align: left; padding-left: 80px; margin-top: 0; }
+
+#greeting .desc .txtBox { text-align: left; }
+
+#greeting .desc .txtBox p { margin-bottom: 30px; }
