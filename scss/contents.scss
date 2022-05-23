@@ -6,6 +6,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  z-index:2;
   background: {
     repeat:no-repeat;
     size:cover;
@@ -99,6 +100,7 @@
       flex-basis:25%;
       border: 1px solid #ccc;
       box-sizing: border-box;
+      border-left: none;
       &.active {
         border-color:$main-color;
         a {
@@ -113,6 +115,42 @@
         align-items: center;
       }
     }
+  }
+  .tabContents {
+    position: relative;
+    >li {
+      display: none;
+      &:nth-child(1) {
+        display: block;
+      }
+      &:target {
+        display: block;
+      }
+      &:not(:target) {
+        display: none;
+      }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    // > li {
+    //   display: none;
+    //   &:nth-child(1) {
+    //     display: block;
+    //   }
+    //   &:target {
+    //     display: block;
+    //   }
+    //   &:not(:target) {
+    //     display: none;
+    //   }
+    // }
   }
 }
 
@@ -229,14 +267,21 @@
     .yearBox {
       display: flex;
       padding: 50px 0;
+      position: relative;
       &:nth-child(2n) {
         justify-content: flex-end;
         padding-left: 100px;
+        .inner .year:before {
+          left:-60px;
+        }
       }
       &:nth-child(2n+1) {
         text-align: right;
         padding-right: 100px;  
         .inner {
+          .year:before {
+            right:-60px;
+          }
           .monthBox {
             li {
               flex-direction: row-reverse;
@@ -257,6 +302,19 @@
           font-size: $font-large;
           font-weight: 700;
           margin-bottom: 30px;
+          position: relative;
+          &:before {
+            content: '';
+            display: block;
+            width:20px;
+            height: 20px;
+            border-radius: 100%;
+            background-color: #fff;
+            border: 5px solid $main-color;
+            box-sizing: border-box;
+            position: absolute;
+            top:15px;
+          }
         }
         .monthBox {
           li {
