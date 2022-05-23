@@ -87,6 +87,21 @@
     }
   }
 }
+.h4 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  display: flex;
+  &:before {
+    content: '';
+    display: block;
+    width:4px;
+    height: 20px;
+    background: rgb(219,62,62);
+    background: linear-gradient(180deg, $main-color 0%, $main-color 50%, #ccc 50%, #ccc 100%);
+    margin-right: 15px;
+  }
+}
 @for $i from 1 to 6 {
   #subVisual0#{$i} {
     background-image: url("../images/contents/subVisual0#{$i}.jpg");
@@ -130,27 +145,6 @@
         display: none;
       }
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    // > li {
-    //   display: none;
-    //   &:nth-child(1) {
-    //     display: block;
-    //   }
-    //   &:target {
-    //     display: block;
-    //   }
-    //   &:not(:target) {
-    //     display: none;
-    //   }
-    // }
   }
 }
 
@@ -334,8 +328,44 @@
   #map {
     height: 500px;
     background-color: #ccc;
+    margin-bottom: 50px;
+  }
+  .tab {
+    .tabMenu {
+      margin-bottom: 50px;
+    }
   }
 }
+
+.contentsTable {
+  width:100%;
+  border-top:2px solid $main-color;
+  tbody,thead {
+    th,td {
+      padding:15px 10px;
+      border-bottom: 1px solid #999;
+      border-left:1px solid #999;
+      &:nth-child(1) {
+        border-left: none;
+      }
+    }
+  }
+}
+.boardTable {
+  width:100%;
+  border-top:2px solid $main-color;
+  tbody,thead {
+    th,td {
+      padding:15px 10px;
+      border-bottom: 1px solid #999;
+      text-align: center;
+    }
+  }
+  .subject {
+    text-align: left;
+  }
+}
+
 
 
 .overlay {
