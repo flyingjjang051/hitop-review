@@ -330,3 +330,36 @@
     }
   }
 }
+#location {
+  #map {
+    height: 500px;
+    background-color: #ccc;
+  }
+}
+
+
+.overlay {
+  background-color: $main-color;
+  color:#fff;
+  text-align: center;
+  padding:15px;
+  border-radius: 10px;
+  overflow: hidden;
+  @include longShadow(darken($main-color,10),60);
+  .address {
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: 20px;
+  }
+  &:before {
+    content: '';
+    display: block;
+    width:0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: $main-color;
+    position: absolute;
+    left:calc(50% - 5px);
+    bottom: -20px;
+  }
+}
