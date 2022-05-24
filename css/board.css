@@ -37,3 +37,11 @@
 .pagination a.next:before { color: #fff; font-family: "Material Icons"; content: "chevron_right"; display: inline-block; margin-left: 0; }
 
 .pagination a.active { background-color: #bf0c14; color: #fff; }
+
+.searchForm { background-color: #ccc; display: flex; justify-content: center; padding: 80px 150px; }
+
+.searchForm #searchTxt { height: 50px; padding: 0 10px; border: 1px solid #999; box-sizing: border-box; margin-right: 5px; flex-grow: 1; }
+
+.searchForm #searchCategory { height: 50px; padding: 0 10px; border: 1px solid #999; width: 200px; margin-right: 5px; }
+
+.searchForm button { width: 80px; background-color: #111; color: #fff; border-radius: 5px; }
