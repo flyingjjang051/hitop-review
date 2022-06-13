@@ -7,16 +7,23 @@
     <li class="swiper-slide visual03"></li>
   </ul>
   <div class="slogan">
-    <h2>High Technology TOP Peoples</h2>
-    <p>
+    <h2 data-splitting>High Technology TOP Peoples</h2>
+    <p data-splitting>
       아름답고 쾌적한 거리, 안전하고 차별화 된 공간을 원하십니까? <br />
       최고의 기술을 가진 최상의 조직! 자연을 닮은 제품을 제공하는 하이탑입니다.
     </p>
   </div>
-  <button class="prev">
+  <div class="pagination">
+    <div class="bullets"></div>
+    <div class="autoBtns">
+      <button class="pause"><span class="material-icons"> pause_circle </span></button>
+      <button class="play"><span class="material-icons"> play_circle </span></button>
+    </div>
+  </div>
+  <button class="prev btn">
     <span class="material-icons"> chevron_left </span>
   </button>
-  <button class="next">
+  <button class="next btn">
     <span class="material-icons"> chevron_right </span>
   </button>
 
@@ -183,10 +190,39 @@
 <!-- customer end -->
 
 <script>
-  new Swiper("#mainVisual", {
+  Splitting();
+
+  const pause = document.querySelector("#mainVisual .pause");
+  const play = document.querySelector("#mainVisual .play");
+  pause.addEventListener("click", function () {
+    mainVisualSlider.autoplay.stop();
+    play.style.display = "block";
+    pause.style.display = "none";
+  });
+  play.addEventListener("click", function () {
+    //console.log("play");
+    mainVisualSlider.autoplay.start();
+    play.style.display = "none";
+    pause.style.display = "block";
+  });
+
+  const mainVisualTL = gsap.timeline();
+  mainVisualTL
+    .from("#mainVisual .slogan h2 .char", { y: 100, opacity: 0, duration: 1, ease: "power4.out", stagger: 0.05 })
+    .from("#mainVisual .slogan p .char", { y: 100, opacity: 0, duration: 1, ease: "power4.out", stagger: 0.02 }, "-=1");
+  const mainVisualSlider = new Swiper("#mainVisual", {
     navigation: {
       nextEl: "#mainVisual .next",
       prevEl: "#mainVisual .prev",
+    },
+    pagination: {
+      el: "#mainVisual .pagination .bullets",
+      type: "bullets",
+      clickable: true,
+    },
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
     },
   });
 </script>

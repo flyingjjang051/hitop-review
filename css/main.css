@@ -20,17 +20,31 @@
 
 #mainVisual .slogan { z-index: 2; text-align: center; color: #fff; user-select: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
 
-#mainVisual .slogan h2 { margin-bottom: 40px; font-size: 48px; font-weight: 700; }
+#mainVisual .slogan h2 { margin-bottom: 40px; font-size: 48px; font-weight: 700; overflow: hidden; line-height: 1.5; }
 
-#mainVisual .slogan p { font-size: 20px; line-height: 1.5; }
+#mainVisual .slogan p { font-size: 20px; line-height: 1.5; overflow: hidden; }
 
-#mainVisual button { width: 80px; height: 80px; z-index: 3; border: 1px solid #fff; background: none; position: absolute; top: 50%; transform: translateY(-50%); }
+#mainVisual .btn { width: 80px; height: 80px; z-index: 3; border: 1px solid #fff; background: none; position: absolute; top: 50%; transform: translateY(-50%); }
 
-#mainVisual button .material-icons { font-size: 48px; color: #fff; vertical-align: top; }
+#mainVisual .btn .material-icons { font-size: 48px; color: #fff; vertical-align: top; }
 
-#mainVisual button.prev { left: 50px; }
+#mainVisual .btn.prev { left: 50px; }
 
-#mainVisual button.next { right: 50px; }
+#mainVisual .btn.next { right: 50px; }
+
+#mainVisual .pagination { position: absolute; width: 100%; bottom: 150px; z-index: 3; display: flex; justify-content: center; align-items: center; }
+
+#mainVisual .pagination .swiper-pagination-bullets { width: auto; }
+
+#mainVisual .pagination .swiper-pagination-bullets .swiper-pagination-bullet { width: 24px; height: 24px; opacity: 1; box-sizing: border-box; border: 2px solid #fff; background: none; border-radius: 100px; transition: all 0.25s ease; }
+
+#mainVisual .pagination .swiper-pagination-bullets .swiper-pagination-bullet-active { background-color: #fff; width: 100px; }
+
+#mainVisual .pagination .autoBtns button { background: none; border: none; outline: none; }
+
+#mainVisual .pagination .autoBtns button.play { display: none; }
+
+#mainVisual .pagination .autoBtns button .material-icons { font-size: 30px; color: #fff; }
 
 #mainVisual .iconScroll { width: 100%; position: absolute; bottom: 50px; z-index: 1; text-align: center; color: #fff; }
 
