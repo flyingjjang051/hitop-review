@@ -2,9 +2,21 @@
 
 <div id="mainVisual">
   <ul class="swiper-wrapper">
-    <li class="swiper-slide visual01"></li>
-    <li class="swiper-slide visual02"></li>
-    <li class="swiper-slide visual03"></li>
+    <li class="swiper-slide visual01">
+      <div class="aniMask">
+        <div class="img"></div>
+      </div>
+    </li>
+    <li class="swiper-slide visual02">
+      <div class="aniMask">
+        <div class="img"></div>
+      </div>
+    </li>
+    <li class="swiper-slide visual03">
+      <div class="aniMask">
+        <div class="img"></div>
+      </div>
+    </li>
   </ul>
   <div class="slogan">
     <h2 data-splitting>High Technology TOP Peoples</h2>
@@ -205,12 +217,14 @@
     play.style.display = "none";
     pause.style.display = "block";
   });
-
   const mainVisualTL = gsap.timeline();
   mainVisualTL
     .from("#mainVisual .slogan h2 .char", { y: 100, opacity: 0, duration: 1, ease: "power4.out", stagger: 0.05 })
     .from("#mainVisual .slogan p .char", { y: 100, opacity: 0, duration: 1, ease: "power4.out", stagger: 0.02 }, "-=1");
   const mainVisualSlider = new Swiper("#mainVisual", {
+    effect: "fade",
+    speed: 1000,
+    loop: true,
     navigation: {
       nextEl: "#mainVisual .next",
       prevEl: "#mainVisual .prev",
@@ -221,7 +235,7 @@
       clickable: true,
     },
     autoplay: {
-      delay: 2000,
+      delay: 3000,
       disableOnInteraction: false,
     },
   });

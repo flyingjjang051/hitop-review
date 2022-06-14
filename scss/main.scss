@@ -34,18 +34,48 @@
   ul {
     li {
       height: 100vh;
-      background: {
-        position: 50% 50%;
-        size: cover;
-        repeat: no-repeat;
+      position: relative;
+      overflow: hidden;
+      opacity: 1 !important;
+      pointer-events: none !important;
+      &.swiper-slide-active {
+        .aniMask {
+          width: 100%;
+          transition: all 1s ease;
+        }
       }
-      &.visual01 {
+      &.swiper-slide-prev {
+        .aniMask {
+          width: 100%;
+        }
+      }
+      .aniMask {
+        position: absolute;
+        width: 0;
+        height: 100%;
+        //transform: scale(1.2);
+        overflow: hidden;
+      }
+      .img {
+        position: absolute;
+        width: 100vw;
+        height: 100%;
+        // transform: scale(1.2);
+        // transition: all 5s ease 1s;
+        background: {
+          position: 50% 50%;
+          size: cover;
+          repeat: no-repeat;
+        }
+      }
+
+      &.visual01 .img {
         background-image: url("../images/main/mainVisual01.jpg");
       }
-      &.visual02 {
+      &.visual02 .img {
         background-image: url("../images/main/mainVisual02.jpg");
       }
-      &.visual03 {
+      &.visual03 .img {
         background-image: url("../images/main/mainVisual03.jpg");
       }
     }
@@ -72,7 +102,7 @@
   .btn {
     width: 80px;
     height: 80px;
-    z-index: 3;
+    z-index: 9999;
     border: 1px solid #fff;
     background: none;
     @include absCenter(false, true);
